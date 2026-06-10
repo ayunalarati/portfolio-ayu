@@ -626,7 +626,7 @@ transform:translateY(0px);
 
     border:none;
 
-    padding:35px;
+    padding: 40px;
 
     border-radius:30px;
 
@@ -1105,7 +1105,7 @@ footer small{
 
 .hero h1{
 
-    font-size:46px;
+    font-size: 46px;
 }
 
 .hero h2{
@@ -1394,6 +1394,10 @@ footer small{
 
     line-height:1.7;
 
+    overflow-wrap:break-word;
+
+    width:100%;
+
 }
 .contact-closing{
 
@@ -1411,5 +1415,38 @@ footer small{
 .dark .contact-closing{
 
     color:#d1d5db;
+
+}
+
+@media(max-width:600px){
+
+    .contact-box{
+
+        padding:35px 25px;
+
+    }
+
+    .contact-box h3{
+
+        font-size:24px;
+
+        line-height:1.4;
+
+    }
+
+    .contact-item{
+
+        width:100%;
+
+        min-width:unset;
+
+    }
+
+}
+.contact-item a{
+
+    color:inherit;
+
+    text-decoration:none;
 
 }
