@@ -44,9 +44,10 @@ const githubContainer =
 document.getElementById("github-projects");
 
 githubContainer.innerHTML = `
-<div class="repo-card">
-    <h3>Loading Projects...</h3>
-    <p>Please wait a moment.</p>
+<div class="project-card">
+    <div class="project-icon">⏳</div>
+    <h3>Loading Repositories...</h3>
+    <p>Please wait a moment while we fetch the latest projects from GitHub.</p>
 </div>
 `;
 
@@ -72,21 +73,27 @@ fetch("https://api.github.com/users/ayunalarati/repos")
 
         const card = document.createElement("div");
 
-        card.classList.add("repo-card");
+        card.classList.add("project-card");
+        
+        // Membersihkan nama repo agar lebih rapi (menghapus tanda hubung)
+        const cleanName = repo.name.replace(/-/g, " ").substring(0, 40) + (repo.name.length > 40 ? "..." : "");
 
         card.innerHTML = `
 
-        <h3>${repo.name}</h3>
+        <div class="project-icon">🚀</div>
 
-        <p>
-        ${repo.description || "No description available yet."}
+        <h3>${cleanName}</h3>
+
+        <p style="font-size: 0.9em; margin-bottom: 10px;">
+        ${repo.description || "Eksplorasi proyek dan kode sumber terkait di repositori ini."}
         </p>
 
-        <a href="${repo.html_url}"
-           target="_blank">
+        <div class="project-tags" style="margin-top:15px; margin-bottom:15px;">
+            <span>${repo.language || "Data Science"}</span>
+        </div>
 
+        <a href="${repo.html_url}" target="_blank" style="color: inherit; font-weight: 600; text-decoration: underline;">
            View Repository →
-
         </a>
 
         `;
@@ -101,14 +108,13 @@ fetch("https://api.github.com/users/ayunalarati/repos")
 
     githubContainer.innerHTML = `
 
-    <div class="repo-card">
-
-        <h3>Oops 😢</h3>
+    <div class="project-card">
+        <div class="project-icon">😢</div>
+        <h3>Oops</h3>
 
         <p>
-        Failed to load GitHub repositories.
+        Gagal memuat repositori dari GitHub. Silakan kunjungi profil langsung.
         </p>
-
     </div>
 
     `;
