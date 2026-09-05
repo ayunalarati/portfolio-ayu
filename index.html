@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Ayu Nalarati | Data Analyst & IT Administrator</title>
+    <title>Ayu Nalarati | Data Analyst, AI Enthusiast & IT Administrator</title>
 
     <meta name="description"
-        content="Portfolio of Ayu Nalarati - Data Analyst, Machine Learning Enthusiast, and IT Administrator.">
+        content="Portofolio Ayu Nalarati - Analis Data, Antusias Kecerdasan Buatan (AI), dan Administrator IT. Mahasiswa S1 Teknik Informatika Universitas Cendekia Abditama.">
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -22,178 +22,303 @@
 
 <body>
 
+    <!-- Ambient Glowing Background Blobs -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
     <!-- ================= NAVBAR ================= -->
 
     <nav class="navbar">
 
-        <div class="logo">
-            Ayu Nalarati
-        </div>
+        <a href="https://github.com/ayunalarati/portfolio-ayu" class="logo">
+            <span>Ayu Nalarati</span>
+            <span class="logo-badge">Portfolio</span>
+        </a>
 
         <ul class="nav-links">
 
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#journey">Journey</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#journey">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
 
         </ul>
 
-        <button id="theme-toggle">
-            🌙
-        </button>
+        <div class="nav-actions">
+            <button id="theme-toggle" aria-label="Toggle Dark Mode" title="Ganti Tema (Dark / Light)">
+                🌙
+            </button>
+        </div>
 
     </nav>
 
-    <!-- ================= HERO ================= -->
+    <!-- ================= 1. HERO SECTION ================= -->
 
-    <section class="hero">
+    <section class="hero" id="hero">
 
+        <!-- HERO LEFT COLUMN: Bio & CTAs -->
         <div class="hero-content">
 
-            <span class="hero-badge">
-                👋 Hello, I'm Ayu — Data Analyst & IT Administrator
-            </span>
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                <span>Terbuka untuk Peluang Kerja & Kolaborasi</span>
+            </div>
 
             <h1>
                 Ayu Nalarati
             </h1>
 
-            <h2>
-                Data Analyst & AI Enthusiast
+            <span class="hero-role">
+                <span class="highlight-text" id="typewriter-role">Data Analyst & AI Enthusiast</span>
                 <br>
-                &
-                <br>
-                IT Administrator
-            </h2>
+                <span style="font-size: 0.85em; opacity: 0.9;">& IT Administrator</span>
+            </span>
 
             <p>
                 Mahasiswa tingkat akhir Teknik Informatika yang dinamis dengan pengalaman kuat dalam
-                <strong>Administrasi Digital</strong>, <strong>Manajemen Operasional</strong>, dan <strong>Analisis
-                    Data</strong>.
-                Berpengalaman mengoptimalkan sistem front-end, akurasi keuangan, dan manajemen inventaris.
+                <strong>Administrasi Digital</strong>, <strong>Manajemen Operasional Bisnis</strong>, dan <strong>Analisis Data</strong>.
+                Berpengalaman dalam mengoptimalkan sistem administrasi front-end, akurasi rekapitulasi keuangan, hingga
+                efisiensi manajemen inventaris. Dikenal sebagai pribadi yang disiplin, komunikatif, dan cakap dalam manajemen proyek mandiri.
             </p>
 
-            <div class="hero-buttons" style="flex-wrap: wrap;">
+            <div class="hero-buttons">
 
                 <a href="#projects" class="btn">
-                    Explore My Work
+                    <i class="fas fa-layer-group"></i> Explore My Work
                 </a>
 
                 <a href="assets/CV_Ayu_Nalarati_EN.pdf" target="_blank" class="btn-outline">
-                    Resume (EN)
+                    <i class="fas fa-file-alt"></i> Resume (EN)
                 </a>
 
                 <a href="assets/CV_Ayu_Nalarati_ID.pdf" target="_blank" class="btn-outline">
-                    Resume (ID)
+                    <i class="fas fa-file-pdf"></i> Resume (ID)
                 </a>
+
+            </div>
+
+            <!-- Quick Tech Stack Chips -->
+            <div class="hero-tech-stack">
+                <span class="tech-stack-title">Core Tools:</span>
+                <span class="tech-chip"><i class="fab fa-python" style="color:#3776AB;"></i> Python</span>
+                <span class="tech-chip"><i class="fas fa-database" style="color:#00758F;"></i> SQL</span>
+                <span class="tech-chip"><i class="fas fa-brain" style="color:#FF6F00;"></i> Machine Learning</span>
+                <span class="tech-chip"><i class="fas fa-eye" style="color:#6366F1;"></i> Computer Vision</span>
+                <span class="tech-chip"><i class="fas fa-file-excel" style="color:#107C41;"></i> Excel & Admin</span>
+            </div>
+
+        </div>
+
+        <!-- HERO RIGHT COLUMN: OVAL FRAME PHOTO -->
+        <div class="hero-image">
+
+            <div class="photo-frame-wrapper">
+                
+                <!-- Glowing Aura Ring Behind Oval Frame -->
+                <div class="photo-glow-ring"></div>
+                
+                <!-- Oval Photo Container -->
+                <div class="photo-oval-container">
+                    <img src="assets/profile.jpg" alt="Ayu Nalarati - Data Analyst & IT Administrator" class="profile-img-oval">
+                </div>
+
+                <!-- Floating Interactive Chip 1 -->
+                <div class="floating-chip chip-top">
+                    <div class="chip-icon">🎓</div>
+                    <div class="chip-text">
+                        <span class="chip-title">Informatics Eng.</span>
+                        <span class="chip-sub">Semester 8 • Active</span>
+                    </div>
+                </div>
+
+                <!-- Floating Interactive Chip 2 -->
+                <div class="floating-chip chip-bottom">
+                    <div class="chip-icon">⚡</div>
+                    <div class="chip-text">
+                        <span class="chip-title">Data & AI</span>
+                        <span class="chip-sub">High Data Accuracy</span>
+                    </div>
+                </div>
 
             </div>
 
         </div>
 
-        <div class="hero-image">
-
-            <img src="assets/profile.jpg" alt="Ayu Nalarati">
-
-        </div>
-
     </section>
 
-    <!-- ================= SNAPSHOT ================= -->
+    <!-- ================= SNAPSHOT STATS ================= -->
 
     <section class="snapshot">
 
         <div class="snapshot-card">
-
-            <div class="snapshot-icon">🌐</div>
-
-            <h3>100%</h3>
-
-            <p>
-                Akurasi Rekapitulasi Data & Manajemen Inventaris
-            </p>
-
-        </div>
-
-        <div class="snapshot-card">
-
-            <div class="snapshot-icon">💼</div>
-
-            <h3>50+</h3>
-
-            <p>
-                Klien Strategis Personal Branding & LinkedIn Optimization
-            </p>
-
-        </div>
-
-        <div class="snapshot-card">
-
             <div class="snapshot-icon">📊</div>
-
-            <h3>3+</h3>
-
-            <p>
-                Model Machine Learning (NLP & MLP) untuk Analisis Data
-            </p>
-
+            <h3 class="stat-number">Maksimal</h3>
+            <p>Akurasi Rekapitulasi Data & Manajemen Inventaris</p>
         </div>
 
         <div class="snapshot-card">
+            <div class="snapshot-icon">⭐</div>
+            <h3 class="stat-number">5.0 ★</h3>
+            <p>Kualitas Layanan & Kepuasan Klien LinkedIn</p>
+        </div>
 
+        <div class="snapshot-card">
+            <div class="snapshot-icon">🤖</div>
+            <h3 class="stat-number">6+</h3>
+            <p>Proyek AI, Computer Vision, NLP & Basis Data</p>
+        </div>
+
+        <div class="snapshot-card">
             <div class="snapshot-icon">🚀</div>
-
-            <h3>3</h3>
-
-            <p>
-                Fokus Utama: IT Specialist, Data Analysis & Digital Branding
-            </p>
-
+            <h3 class="stat-number">4</h3>
+            <p>Pilar Keahlian: Data, AI, Admin & Digital Branding</p>
         </div>
 
     </section>
 
-
-
-    <!-- ================= ABOUT ================= -->
+    <!-- ================= 2. ABOUT SECTION (Split) ================= -->
 
     <section id="about">
 
-        <div class="section-title">
+        <div class="split-grid">
 
-            <span>ABOUT</span>
+            <!-- ABOUT LEFT: Story & Narrative -->
+            <div class="split-left">
 
-            <h2>
-                Bridging Tech, Data Analysis & Digital Branding
-            </h2>
+                <div class="section-heading-left">
+                    <span class="section-badge"><i class="fas fa-user-circle"></i> ABOUT ME</span>
+                    <h2>Bridging Data Science, AI & Digital Operations</h2>
+                    <p>Mengintegrasikan ketelitian analitis teknologi informasi dengan efisiensi manajemen operasional bisnis nyata.</p>
+                </div>
 
-        </div>
+                <div class="about-card">
+                    <div class="about-card-section">
+                        <div class="about-section-header">
+                            <span class="about-dot"></span>
+                            <h4>Profil & Latar Belakang</h4>
+                        </div>
+                        <p>
+                            Saya adalah mahasiswa tingkat akhir program studi <strong>S1 Teknik Informatika di Universitas Cendekia Abditama, Tangerang</strong> (Semester 8). Memiliki perpaduan unik antara pemahaman teknis di bidang <i>Data Analysis</i> & <i>Artificial Intelligence</i> dengan keterampilan praktis dalam <i>Digital Administration</i> dan manajemen operasional bisnis.
+                        </p>
+                    </div>
 
-        <div class="about-container">
+                    <div class="about-card-section">
+                        <div class="about-section-header">
+                            <span class="about-dot"></span>
+                            <h4>Fokus Riset & Keahlian Komputasi</h4>
+                        </div>
+                        <p>
+                            Aktif mengeksplorasi kecerdasan buatan, termasuk <strong>Computer Vision (DenseNet-GRU, CNN)</strong>, <strong>Natural Language Processing (NLP)</strong>, <strong>Deep Learning (MLP)</strong>, penanganan data tidak seimbang (<i>Class Weights</i> & SMOTE), serta perancangan <strong>Database Relasional (SQL)</strong> dan pengembangan web responsif. Riset klasifikasi radiografi toraks saya berhasil dipresentasikan di forum ilmiah nasional <strong>SeNTIK 2026</strong>.
+                        </p>
+                    </div>
 
-            <div class="about-text">
+                    <div class="about-card-section">
+                        <div class="about-section-header">
+                            <span class="about-dot"></span>
+                            <h4>Dedikasi Operasional & Etika Kerja</h4>
+                        </div>
+                        <p>
+                            Berpengalaman mengelola administrasi <i>front-desk</i>, pencatatan kas keuangan, hingga logistik inventaris dengan komitmen <strong>akurasi 100%</strong>, komunikasi proaktif, dan manajemen waktu mandiri yang terbukti andal.
+                        </p>
+                    </div>
 
-                <p>
-                    Sebagai Mahasiswa tingkat akhir Teknik Informatika (Universitas Cendekia Abditama), saya berfokus
-                    pada
-                    <strong>Sistem Basis Data</strong>, <strong>Pemrograman Web</strong>, <strong>Struktur
-                        Data</strong>, dan
-                    <strong>Sistem Informasi Manajemen</strong>.
-                </p>
+                    <!-- Quick Highlights Bar -->
+                    <div class="about-quick-bar">
+                        <div class="quick-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Tangerang, Banten</span>
+                        </div>
+                        <div class="quick-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>S1 Teknik Informatika (Sem 8)</span>
+                        </div>
+                        <div class="quick-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Open for Roles & Projects</span>
+                        </div>
+                    </div>
+                </div>
 
-                <p>
-                    Saya memiliki pengalaman kuat dalam administrasi digital dan manajemen operasional bisnis. Saya
-                    terbiasa mengelola operasional <i>front desk</i>, mengkoordinasikan komunikasi harian, serta
-                    memastikan akurasi data keuangan dan inventaris berjalan efisien.
-                </p>
+            </div>
 
-                <p>
-                    Selain itu, saya sangat berminat dalam bidang <strong>IT & Data Analysis</strong> (termasuk NLP dan
-                    Deep Learning) serta <strong>Digital Branding</strong>. Saya juga membantu klien menyusun strategi
-                    personal branding dan <i>digital copywriting</i> untuk menunjang karir profesional mereka.
-                </p>
+            <!-- ABOUT RIGHT: Education & Values -->
+            <div class="split-right">
+
+                <!-- Education Card -->
+                <div class="education-card">
+                    <div class="edu-header">
+                        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div>
+                            <h4>S1 Teknik Informatika</h4>
+                            <small style="color: #64748B; font-weight: 500;">Universitas Cendekia Abditama, Tangerang</small>
+                        </div>
+                    </div>
+
+                    <div class="edu-meta-row">
+                        <span class="edu-meta">Agustus 2022 – 2026 (Ekspektasi Lulus)</span>
+                        <span class="edu-status-badge">Semester 8 • Aktif</span>
+                    </div>
+
+                    <div class="edu-details">
+                        <p style="margin-bottom: 8px;"><strong>Fokus Bidang Studi:</strong></p>
+                        <div class="course-chips">
+                            <span>Sistem Basis Data</span>
+                            <span>Pemrograman Web</span>
+                            <span>Struktur Data</span>
+                            <span>Kecerdasan Buatan (AI)</span>
+                            <span>Sistem Informasi Manajemen</span>
+                        </div>
+                    </div>
+
+                    <div class="edu-achievement">
+                        <i class="fas fa-award" style="color: #EAB308;"></i>
+                        <span><strong>Prestasi Ilmiah:</strong> Pemakalah Terpilih di <strong>SeNTIK 10 Dasawarsa 2026</strong> (Riset Klasifikasi Thoracic X-Ray DenseNet-GRU).</span>
+                    </div>
+                </div>
+
+                <!-- Strengths / Character Values -->
+                <div class="strengths-pill-box">
+                    <h4><i class="fas fa-shield-alt" style="color:var(--primary-dark);"></i> Karakter & Nilai Kerja Utama</h4>
+                    
+                    <div class="value-cards-grid">
+                        
+                        <div class="value-mini-card">
+                            <div class="value-mini-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                            <div>
+                                <h5>Jujur & Berintegritas</h5>
+                                <p>Menjunjung transparansi penuh dalam pencatatan keuangan dan pengelolaan data operasional.</p>
+                            </div>
+                        </div>
+
+                        <div class="value-mini-card">
+                            <div class="value-mini-icon"><i class="fas fa-search"></i></div>
+                            <div>
+                                <h5>Teliti & Berorientasi Detail</h5>
+                                <p>Standar akurasi tinggi dalam rekapitulasi data kompleks tanpa toleransi eror.</p>
+                            </div>
+                        </div>
+
+                        <div class="value-mini-card">
+                            <div class="value-mini-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h5>Disiplin & Manajemen Waktu</h5>
+                                <p>Mandiri mengatur prioritas tugas dan konsisten memenuhi target deadline.</p>
+                            </div>
+                        </div>
+
+                        <div class="value-mini-card">
+                            <div class="value-mini-icon"><i class="fas fa-comments"></i></div>
+                            <div>
+                                <h5>Komunikatif & Adaptif</h5>
+                                <p>Luwes dalam koordinasi tim, pelayanan front-desk, dan konsultasi kebutuhan klien.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
 
             </div>
 
@@ -201,112 +326,283 @@
 
     </section>
 
-    <!-- ================= PROJECTS ================= -->
+    <!-- ================= 3. PROJECTS SECTION (Balanced & Clean) ================= -->
 
     <section id="projects">
 
-        <div class="section-title">
-
-            <span>PORTFOLIO & PROJECTS</span>
-
-            <h2>
-                IT, Data, & Digital Branding Projects
-            </h2>
-
+        <div class="section-header-center">
+            <span class="section-badge"><i class="fas fa-code-branch"></i> PORTFOLIO & PROJECTS</span>
+            <h2>Proyek Teknik Informatika, AI & Sistem</h2>
+            <p style="max-width: 650px; margin: 8px auto 0; color: #64748B; font-size: 14.5px;">Koleksi proyek riset kecerdasan buatan, pemrosesan data cerdas, arsitektur basis data, dan pengembangan sistem terstruktur.</p>
         </div>
 
-        <div class="featured-project">
+        <!-- Featured Project Card: Thoracic X-Ray -->
+        <div class="featured-project-box">
 
-            <span class="project-label">
-                🌟 Featured Data Science Project
-            </span>
+            <div class="featured-badges-row">
+                <span class="project-label">
+                    🌟 Featured AI & Computer Vision Project
+                </span>
+                <span class="project-label project-label-conference">
+                    <i class="fas fa-microphone-alt"></i> Dipresentasikan di SeNTIK 2026
+                </span>
+            </div>
 
-            <h3>
-                Analisis Sentimen Data Twitter (#IndonesiaGelap)
-            </h3>
+            <div class="featured-content-grid">
+                <div class="featured-text">
+                    <h3>
+                        Thoracic X-Ray Multilabel Classification (Computer Vision & Deep Learning)
+                    </h3>
 
-            <p>
-                Melakukan riset komparatif performa 3 model klasifikasi untuk analisis sentimen data Twitter terkait isu
-                publik.
-            </p>
+                    <p>
+                        Mengembangkan sistem klasifikasi penyakit toraks (15 kelas) menggunakan citra radiografi X-Ray dada dari dataset terstandar <strong>NIH ChestX-ray 14</strong> dengan menerapkan arsitektur <i>Deep Learning</i> mutakhir (DenseNet-GRU).
+                    </p>
 
-            <p>
-                Mencakup tahap <i>data crawling</i>, <i>preprocessing</i>, hingga evaluasi akurasi model untuk menemukan
-                metode pengolahan sentimen yang paling efektif.
-            </p>
+                    <p>
+                        Model dirancang untuk mendeteksi berbagai patologi paru secara simultan melalui ekstraksi fitur spasial mendalam yang digabungkan dengan lapisan rekuren untuk performa klasifikasi multilabel optimal.
+                    </p>
 
-            <div class="project-tags">
-
-                <span>📊 Data Analysis</span>
-                <span>🧠 NLP</span>
-                <span>🤖 Machine Learning</span>
-                <span>🕸️ Data Crawling</span>
-
+                    <div class="project-tags">
+                        <span>🩻 Computer Vision</span>
+                        <span>🧠 Deep Learning</span>
+                        <span>🔬 DenseNet-GRU</span>
+                        <span>📊 NIH ChestX-ray 14</span>
+                        <span>🐍 Python & PyTorch/TensorFlow</span>
+                    </div>
+                </div>
             </div>
 
         </div>
 
-        <div class="project-grid">
+        <!-- 2-Column Symmetrical Grid for 6 Projects -->
+        <div class="projects-grid-2col">
 
-            <div class="project-card">
+            <!-- Project 1: Fake Face Detection -->
+            <div class="project-card-balanced">
+                <div>
+                    <div class="project-card-header">
+                        <div class="project-mini-icon">👤</div>
+                        <div>
+                            <span class="project-card-badge">Computer Vision</span>
+                            <h3><a href="https://github.com/ayunalarati/portfolio-ayu" target="_blank">Fake Face Detection (AI & Image Processing)</a></h3>
+                        </div>
+                    </div>
+                    <p>
+                        Membangun sistem kecerdasan buatan berbasis <i>Convolutional Neural Network</i> (CNN) untuk memproses citra wajah dan mendeteksi keaslian wajah secara otomatis dengan akurasi tinggi.
+                    </p>
+                </div>
+                <div class="project-tags">
+                    <span>AI</span>
+                    <span>CNN</span>
+                    <span>Image Processing</span>
+                    <span>Python</span>
+                </div>
+            </div>
 
-                <div class="project-icon">💳</div>
+            <!-- Project 2: Twitter Sentiment Analysis -->
+            <div class="project-card-balanced">
+                <div>
+                    <div class="project-card-header">
+                        <div class="project-mini-icon">💬</div>
+                        <div>
+                            <span class="project-card-badge">NLP & Data Mining</span>
+                            <h3><a href="https://github.com/ayunalarati/portfolio-ayu" target="_blank">Analisis Sentimen Twitter (#IndonesiaGelap)</a></h3>
+                        </div>
+                    </div>
+                    <p>
+                        Riset komparatif performa 3 model klasifikasi untuk analisis sentimen data Twitter, mencakup crawling data, preprocessing teks bahasa Indonesia, hingga evaluasi akurasi model.
+                    </p>
+                </div>
+                <div class="project-tags">
+                    <span>Data Analysis</span>
+                    <span>NLP</span>
+                    <span>Machine Learning</span>
+                    <span>Crawling</span>
+                </div>
+            </div>
 
-                <h3>
-                    Klasifikasi Fraud Kartu Kredit
-                </h3>
-
-                <p>
-                    Membangun model jaringan saraf tiruan menggunakan arsitektur Multi-Layer Perceptron (MLP) untuk
-                    mendeteksi transaksi penipuan finansial dengan Penyesuaian Bobot Kelas.
-                </p>
-
-                <div class="project-tags" style="margin-top:15px;">
+            <!-- Project 3: Credit Card Fraud -->
+            <div class="project-card-balanced">
+                <div>
+                    <div class="project-card-header">
+                        <div class="project-mini-icon">💳</div>
+                        <div>
+                            <span class="project-card-badge">Deep Learning</span>
+                            <h3><a href="https://github.com/ayunalarati/portfolio-ayu" target="_blank">Klasifikasi Fraud Kartu Kredit</a></h3>
+                        </div>
+                    </div>
+                    <p>
+                        Model jaringan saraf tiruan <i>Multi-Layer Perceptron</i> (MLP) untuk mendeteksi transaksi finansial mencurigakan dengan strategi <i>Class Weights</i> untuk menangani data yang sangat tidak seimbang.
+                    </p>
+                </div>
+                <div class="project-tags">
                     <span>Deep Learning</span>
                     <span>MLP</span>
-                    <span>Imbalanced Data</span>
+                    <span>Class Weights</span>
+                    <span>FinTech</span>
                 </div>
-
             </div>
 
-            <div class="project-card">
-
-                <div class="project-icon">🛒</div>
-
-                <h3>
-                    Pengembangan Sistem E-Commerce
-                </h3>
-
-                <p>
-                    Merancang dan mengembangkan arsitektur platform web E-Commerce dengan fokus utama pada peningkatan
-                    pengalaman pengguna (UX) dan keandalan sistem keamanan data transaksi.
-                </p>
-
-                <div class="project-tags" style="margin-top:15px;">
-                    <span>Web Architecture</span>
-                    <span>UX Design</span>
-                    <span>Web Security</span>
+            <!-- Project 4: Database Optimization (SQL) -->
+            <div class="project-card-balanced">
+                <div>
+                    <div class="project-card-header">
+                        <div class="project-mini-icon">🗄️</div>
+                        <div>
+                            <span class="project-card-badge">Data Architecture</span>
+                            <h3><a href="https://github.com/ayunalarati/portfolio-ayu" target="_blank">Optimasi Basis Data Relasional (SQL)</a></h3>
+                        </div>
+                    </div>
+                    <p>
+                        Membangun dan mengoptimalkan skema database relasional yang efisien menggunakan SQL untuk mendukung pemrosesan data sistem informasi manajemen berskala tinggi secara cepat dan terstruktur.
+                    </p>
                 </div>
-
-            </div>
-
-            <div class="project-card">
-
-                <div class="project-icon">🗄️</div>
-
-                <h3>
-                    Optimasi Basis Data (SQL)
-                </h3>
-
-                <p>
-                    Membangun dan mengoptimalkan skema <i>database</i> yang efisien menggunakan SQL untuk mendukung
-                    berbagai kebutuhan pengolahan data pada sistem informasi manajemen.
-                </p>
-
-                <div class="project-tags" style="margin-top:15px;">
+                <div class="project-tags">
                     <span>SQL</span>
                     <span>Database Design</span>
-                    <span>Data Management</span>
+                    <span>Query Optimization</span>
+                    <span>MIS</span>
+                </div>
+            </div>
+
+            <!-- Project 5: E-Commerce System -->
+            <div class="project-card-balanced">
+                <div>
+                    <div class="project-card-header">
+                        <div class="project-mini-icon">🛒</div>
+                        <div>
+                            <span class="project-card-badge">Web Architecture</span>
+                            <h3><a href="https://github.com/ayunalarati/portfolio-ayu" target="_blank">Pengembangan Sistem E-Commerce</a></h3>
+                        </div>
+                    </div>
+                    <p>
+                        Merancang arsitektur platform web E-Commerce dengan fokus utama pada pengalaman pengguna (UX) responsif, integrasi katalog produk, dan keandalan sistem keamanan data transaksi.
+                    </p>
+                </div>
+                <div class="project-tags">
+                    <span>Web Architecture</span>
+                    <span>UX Design</span>
+                    <span>Data Security</span>
+                    <span>Full-Stack</span>
+                </div>
+            </div>
+
+            <!-- Project 6: Digital Administration & Inventory System -->
+            <div class="project-card-balanced">
+                <div>
+                    <div class="project-card-header">
+                        <div class="project-mini-icon">📋</div>
+                        <div>
+                            <span class="project-card-badge">IT Operations</span>
+                            <h3><a href="https://github.com/ayunalarati/portfolio-ayu" target="_blank">Sistem Administrasi & Rekapitulasi Data</a></h3>
+                        </div>
+                    </div>
+                    <p>
+                        Perancangan alur pencatatan dan rekapitulasi data operasional bisnis, sistem inventaris stok, serta pelaporan keuangan digital terintegrasi dengan tingkat akurasi 100%.
+                    </p>
+                </div>
+                <div class="project-tags">
+                    <span>Data Operations</span>
+                    <span>Financial Records</span>
+                    <span>Inventory Mgmt</span>
+                    <span>Excel & Admin</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= 4. CERTIFICATES & DOCUMENTATION (Balanced Split) ================= -->
+
+    <section id="certificates">
+
+        <div class="section-header-center">
+            <span class="section-badge"><i class="fas fa-certificate"></i> CERTIFICATION & RECOGNITION</span>
+            <h2>Sertifikat & Pengakuan Akademik</h2>
+            <p style="max-width: 650px; margin: 8px auto 0; color: #64748B; font-size: 14.5px;">Bukti kelayakan kompetensi dan kontribusi ilmiah dalam forum konferensi nasional teknologi informasi.</p>
+        </div>
+
+        <div class="split-grid">
+
+            <!-- CERTIFICATES LEFT: Certificate Image & Credential Meta -->
+            <div class="cert-card-left">
+
+                <div class="cert-image-frame previewable-trigger" data-img-src="assets/certificate_sentik.jpg" data-img-alt="Sertifikat Penyaji SeNTIK 10 Dasawarsa 2026 - Ayu Nalarati" title="Klik untuk memperbesar sertifikat">
+                    <img src="assets/certificate_sentik.jpg" alt="Sertifikat Penyaji SeNTIK 10 Dasawarsa 2026 - Ayu Nalarati" class="cert-thumbnail">
+                    <div class="cert-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>Klik untuk Perbesar Layar Penuh</span>
+                    </div>
+                </div>
+
+                <ul class="cert-meta-list">
+                    <li>
+                        <i class="fas fa-university"></i>
+                        <span><strong>Penyelenggara:</strong> STMIK Jakarta STI&K & Univ Cendekia Abditama</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-calendar-alt"></i>
+                        <span><strong>Waktu:</strong> Sabtu, 29 Agustus 2026</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-hashtag"></i>
+                        <span><strong>No. Sertifikat:</strong> 10.184/SeNTIK/S/VIII/2026</span>
+                    </li>
+                </ul>
+
+                <div class="cert-actions">
+                    <button class="btn" id="btn-preview-cert">
+                        <i class="fas fa-eye"></i> Preview Sertifikat
+                    </button>
+                    <a href="assets/certificate_sentik.jpg" target="_blank" class="btn-outline">
+                        <i class="fas fa-external-link-alt"></i> Buka Gambar Asli
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- CERTIFICATES RIGHT: Details & Presentation Photos Gallery -->
+            <div class="doc-card-right">
+
+                <span class="cert-badge">
+                    <i class="fas fa-microphone-alt"></i> Pemakalah / Penyaji (Speaker)
+                </span>
+
+                <h3 class="cert-title">
+                    Seminar Nasional Teknologi Informasi & Komunikasi (SeNTIK 10 Dasawarsa 2026)
+                </h3>
+
+                <p class="cert-theme">
+                    "Dasawarsa SeNTIK: Satu Dekade Kontribusi dalam Pengembangan Teknologi Informasi, AI, dan Sains Data di Indonesia"
+                </p>
+
+                <!-- 2 Live Conference Documentation Photos -->
+                <div class="doc-gallery-wrapper">
+                    <div class="doc-gallery-header">
+                        <i class="fas fa-camera" style="color:var(--primary);"></i>
+                        <span>Dokumentasi Sesi Presentasi di SeNTIK 2026:</span>
+                    </div>
+
+                    <div class="doc-gallery-grid">
+                        
+                        <div class="doc-photo-card previewable-trigger" data-img-src="assets/sentik_presentation_1.jpg" data-img-alt="Dokumentasi Presentasi SeNTIK 2026 - Diskusi & Tanya Jawab" title="Klik untuk memperbesar">
+                            <img src="assets/sentik_presentation_1.jpg" alt="Dokumentasi Diskusi SeNTIK 2026" class="doc-photo-img">
+                            <div class="doc-photo-overlay">
+                                <i class="fas fa-search-plus"></i>
+                                <span>Sesi Diskusi & Tanya Jawab</span>
+                            </div>
+                        </div>
+
+                        <div class="doc-photo-card previewable-trigger" data-img-src="assets/sentik_presentation_2.jpg" data-img-alt="Dokumentasi Presentasi SeNTIK 2026 - Pemaparan Slide Thoracic X-Ray" title="Klik untuk memperbesar">
+                            <img src="assets/sentik_presentation_2.jpg" alt="Dokumentasi Pemaparan Slide SeNTIK 2026" class="doc-photo-img">
+                            <div class="doc-photo-overlay">
+                                <i class="fas fa-search-plus"></i>
+                                <span>Pemaparan Slide Riset</span>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
@@ -315,72 +611,202 @@
 
     </section>
 
-    <!-- ================= JOURNEY ================= -->
+    <!-- ================= 5. EXPERIENCE / JOURNEY (Split) ================= -->
 
     <section id="journey">
 
-        <div class="section-title">
+        <div class="split-grid">
 
-            <span>EXPERIENCE</span>
+            <!-- EXPERIENCE LEFT: Overview & Highlights -->
+            <div class="split-left">
 
-            <h2>
-                Professional Experience
-            </h2>
+                <div class="section-heading-left">
+                    <span class="section-badge"><i class="fas fa-briefcase"></i> EXPERIENCE</span>
+                    <h2>Pengalaman Kerja & Rekam Jejak</h2>
+                    <p>Dedikasi nyata dalam administrasi operasional bisnis, pelayanan prima pelanggan, dan layanan konsultasi digital profesional.</p>
+                </div>
 
-        </div>
+                <div class="experience-summary-card">
+                    <div class="exp-summary-header">
+                        <div class="exp-summary-icon"><i class="fas fa-chart-line"></i></div>
+                        <div>
+                            <h3>Dampak & Nilai Tambah</h3>
+                            <small style="color: #64748B;">Core Competencies in Action</small>
+                        </div>
+                    </div>
 
-        <div class="timeline">
+                    <p>
+                        Memadukan ketelitian pemrosesan data, kedisiplinan operasional, dan keunggulan komunikasi interpersonal:
+                    </p>
 
-            <div class="timeline-item">
+                    <div class="impact-metrics-grid">
+                        <div class="impact-metric-box">
+                            <span class="metric-num">Maksimal</span>
+                            <span class="metric-label">Akurasi Rekapitulasi Kas & Stok</span>
+                        </div>
+                        <div class="impact-metric-box">
+                            <span class="metric-num">5.0 ★</span>
+                            <span class="metric-label">Kepuasan Klien Layanan LinkedIn</span>
+                        </div>
+                    </div>
 
-                <h3>💻 Front End Admin (Operations & Customer Service)</h3>
+                    <ul class="track-record-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Operasional Front-Desk:</strong> Manajemen reservasi dan relasi pelanggan yang ramah & responsif.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Integritas Finansial:</strong> Pembukuan transaksi kas operasional yang transparan dan presisi.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Personal Branding:</strong> Penyusunan narasi karir profesional berstandar ATS internasional.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Logistik & Inventaris:</strong> Monitoring arus stok produk dan distribusi multi-outlet.</span>
+                        </li>
+                    </ul>
 
-                <p class="timeline-company">
-                    Absolute Padel Club, Tangerang • Februari 2026 - Agustus 2026
-                </p>
-
-                <p class="timeline-desc">
-                    • Mengelola operasional area depan (<i>front desk</i>) termasuk menyambut pelanggan, menangani
-                    reservasi, dan memberikan pelayanan prima.<br>
-                    • Bertanggung jawab atas pencatatan dan rekapitulasi transaksi harian serta administrasi
-                    operasional.<br>
-                    • Mengoordinasikan komunikasi operasional harian untuk memastikan alur kerja lapangan efisien.
-                </p>
+                    <div class="exp-cv-download">
+                        <span class="exp-cv-title"><i class="fas fa-download"></i> Unduh Dokumen CV:</span>
+                        <div class="exp-cv-btns">
+                            <a href="assets/CV_Ayu_Nalarati_EN.pdf" target="_blank" class="btn-mini">
+                                <i class="fas fa-file-alt"></i> Resume (EN)
+                            </a>
+                            <a href="assets/CV_Ayu_Nalarati_ID.pdf" target="_blank" class="btn-mini-outline">
+                                <i class="fas fa-file-pdf"></i> Resume (ID)
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
-            <div class="timeline-item">
+            <!-- EXPERIENCE RIGHT: Timeline Nodes -->
+            <div class="split-right">
 
-                <h3>💼 Professional Resume Strategist & Digital Service</h3>
+                <div class="timeline">
 
-                <p class="timeline-company">
-                    LinkedIn • Agustus 2024 - Sekarang
-                </p>
+                    <!-- Experience 1: Absolute Padel Club -->
+                    <div class="timeline-item">
+                        <div class="timeline-header-row">
+                            <div class="timeline-role">
+                                <div class="role-icon-box" style="background: rgba(132, 204, 22, 0.18); color: var(--primary-dark);">
+                                    <i class="fas fa-desktop"></i>
+                                </div>
+                                <div>
+                                    <h4>Front End Admin</h4>
+                                    <span class="timeline-company">Absolute Padel Club, Tangerang</span>
+                                </div>
+                            </div>
+                            <span class="job-type-badge">On-site • Operasional</span>
+                        </div>
 
-                <p class="timeline-desc">
-                    • Mengelola komunikasi dan konsultasi dengan klien strategis dari berbagai latar belakang
-                    industri.<br>
-                    • Bertanggung jawab atas manajemen waktu proyek mandiri untuk memastikan layanan selesai tepat
-                    waktu.<br>
-                    • Menggunakan kemampuan <i>digital copywriting</i> untuk menyusun narasi profesional persuasif.
-                </p>
+                        <div class="job-meta-tag">
+                            <i class="fas fa-calendar-alt"></i> Februari 2026 – Agustus 2026 (7 Bulan)
+                        </div>
 
-            </div>
+                        <div class="timeline-chips">
+                            <span>Front Desk Operations</span>
+                            <span>Customer Service</span>
+                            <span>Daily Bookkeeping</span>
+                            <span>Workflow Coordination</span>
+                        </div>
 
-            <div class="timeline-item">
+                        <div class="timeline-desc">
+                            <p>
+                                <strong>🎾 Operasional Front Desk:</strong> Menyambut pelanggan, mengelola reservasi lapangan secara <i>real-time</i>, serta memberikan pelayanan prima berstandar tinggi demi kepuasan pengunjung.
+                            </p>
+                            <p>
+                                <strong>💵 Rekapitulasi Keuangan:</strong> Bertanggung jawab penuh atas akurasi pencatatan transaksi harian, invoice sistem, dan rekonsiliasi kas operasional harian.
+                            </p>
+                            <p>
+                                <strong>🔄 Koordinasi Alur Kerja:</strong> Menjembatani komunikasi operasional harian antar staf demi alur kerja lapangan yang efisien dan terkoordinasi.
+                            </p>
+                        </div>
+                    </div>
 
-                <h3>📦 Admin Keuangan & Inventory</h3>
+                    <!-- Experience 2: LinkedIn Resume Strategist -->
+                    <div class="timeline-item">
+                        <div class="timeline-header-row">
+                            <div class="timeline-role">
+                                <div class="role-icon-box" style="background: rgba(10, 102, 194, 0.15); color: #0A66C2;">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+                                <div>
+                                    <h4>Professional Resume Strategist & Digital Service</h4>
+                                    <span class="timeline-company">LinkedIn Platform</span>
+                                </div>
+                            </div>
+                            <span class="job-type-badge" style="background: rgba(10, 102, 194, 0.12); color: #0A66C2; border-color: rgba(10, 102, 194, 0.3);">Freelance • Remote</span>
+                        </div>
 
-                <p class="timeline-company">
-                    Pabrik Tahu • Desember 2021 - Februari 2022
-                </p>
+                        <div class="job-meta-tag">
+                            <i class="fas fa-calendar-alt"></i> Agustus 2024 – Sekarang
+                        </div>
 
-                <p class="timeline-desc">
-                    • <b>Pengelolaan Administrasi</b>: Bertanggung jawab atas rekapitulasi data pemasukan &
-                    pengeluaran.<br>
-                    • <b>Manajemen Stok</b>: Mengelola sistem pencatatan inventory dan stok produk.<br>
-                    • <b>Logistik & Distribusi</b>: Mengatur jadwal distribusi produk ke berbagai outlet secara efisien.
-                </p>
+                        <div class="timeline-chips">
+                            <span>Personal Branding</span>
+                            <span>ATS Optimization</span>
+                            <span>Digital Copywriting</span>
+                            <span>Client Consultation</span>
+                        </div>
+
+                        <div class="timeline-desc">
+                            <p>
+                                <strong>💼 Konsultasi Karir Strategis:</strong> Melakukan analisis profil profesional dan konsultasi intensif dengan klien dari beragam industri untuk memetakan kekuatan kompetensi karir mereka.
+                            </p>
+                            <p>
+                                <strong>✍️ Digital Copywriting & ATS:</strong> Menyusun dokumen resume berstandar <i>Applicant Tracking System</i> (ATS) dan optimasi profil LinkedIn dengan narasi persuasif berkualitas tinggi.
+                            </p>
+                            <p>
+                                <strong>⏱️ Manajemen Proyek Mandiri:</strong> Mengelola timeline pengerjaan proyek secara mandiri dengan tingkat kepuasan klien bintang 5 dan 100% <i>on-time delivery</i>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Experience 3: Pabrik Tahu -->
+                    <div class="timeline-item">
+                        <div class="timeline-header-row">
+                            <div class="timeline-role">
+                                <div class="role-icon-box" style="background: rgba(217, 119, 6, 0.15); color: #D97706;">
+                                    <i class="fas fa-boxes"></i>
+                                </div>
+                                <div>
+                                    <h4>Admin Keuangan & Inventory</h4>
+                                    <span class="timeline-company">Pabrik Tahu, Tangerang</span>
+                                </div>
+                            </div>
+                            <span class="job-type-badge" style="background: rgba(217, 119, 6, 0.12); color: #D97706; border-color: rgba(217, 119, 6, 0.3);">On-site • Operasional</span>
+                        </div>
+
+                        <div class="job-meta-tag">
+                            <i class="fas fa-calendar-alt"></i> Desember 2021 – Februari 2022 (3 Bulan)
+                        </div>
+
+                        <div class="timeline-chips">
+                            <span>Cashflow Tracking</span>
+                            <span>Stock Inventory</span>
+                            <span>Logistics & Distribution</span>
+                            <span>Akurasi 100%</span>
+                        </div>
+
+                        <div class="timeline-desc">
+                            <p>
+                                <strong>📊 Pengelolaan Administrasi & Pembukuan:</strong> Bertanggung jawab penuh atas pencatatan dan rekapitulasi data pemasukan serta pengeluaran kas harian secara presisi.
+                            </p>
+                            <p>
+                                <strong>📦 Manajemen Stok:</strong> Mengelola sistem inventarisasi stok bahan baku dan produk jadi untuk mendukung kelancaran operasional harian.
+                            </p>
+                            <p>
+                                <strong>🚛 Logistik & Distribusi:</strong> Mengatur jadwal dan alur distribusi pengiriman produk ke berbagai mitra outlet secara tepat waktu dan efisien.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
 
@@ -388,97 +814,76 @@
 
     </section>
 
-    <!-- ================= DIFFERENT ================= -->
+    <!-- ================= 6. WHY ME & SKILLS ================= -->
 
-    <section id="different">
+    <section id="skills">
 
-        <div class="section-title">
-
-            <span>WHY ME?</span>
-
-            <h2>
-                4 Core Strengths & Value
-            </h2>
-
+        <div class="section-header-center">
+            <span class="section-badge"><i class="fas fa-award"></i> WHY ME & EXPERTISE</span>
+            <h2>4 Nilai Unggulan & Keahlian Teknis</h2>
         </div>
 
-        <div class="why-grid">
+        <!-- 4 Core Strengths Grid (2x2) -->
+        <div class="why-grid-2x2">
 
             <div class="why-card">
                 <div class="why-icon">📊</div>
-                <h3>1. IT & Data Analysis</h3>
-                <p>
-                    Keahlian analitik dalam pemrosesan data, Machine Learning, NLP, dan manajemen database SQL untuk
-                    menghasilkan <i>insight</i> kuat.
-                </p>
+                <div class="why-card-content">
+                    <h3>1. IT, Data Analysis & AI</h3>
+                    <p>Keahlian analitis pemrosesan data, Machine Learning, Computer Vision (CNN/DenseNet-GRU), NLP, dan optimasi SQL.</p>
+                </div>
             </div>
 
             <div class="why-card">
                 <div class="why-icon">🚀</div>
-                <h3>2. Digital Branding Strategy</h3>
-                <p>
-                    Pendekatan strategis dalam <i>digital copywriting</i> dan optimasi ATS/LinkedIn untuk membangun
-                    personal branding profesional yang persuasif.
-                </p>
+                <div class="why-card-content">
+                    <h3>2. Digital Branding Strategy</h3>
+                    <p>Pendekatan strategis dalam digital copywriting dan optimasi resume/LinkedIn untuk narasi personal branding profesional.</p>
+                </div>
             </div>
 
             <div class="why-card">
                 <div class="why-icon">📂</div>
-                <h3>3. Productivity & Admin</h3>
-                <p>
-                    Disiplin dalam pengelolaan operasional, rekapitulasi data kompleks, administrasi keuangan, dan
-                    pelayanan front-desk.
-                </p>
+                <div class="why-card-content">
+                    <h3>3. Productivity & Operasional</h3>
+                    <p>Disiplin tinggi dalam operasional front-desk, rekapitulasi data kompleks, dan manajemen inventaris stok produk.</p>
+                </div>
             </div>
 
             <div class="why-card">
                 <div class="why-icon">🧠</div>
-                <h3>4. AI & Deep Learning</h3>
-                <p>
-                    Pengalaman mengembangkan arsitektur <i>Deep Learning</i>, <i>Computer Vision</i> (CNN), dan
-                    klasifikasi multi-label untuk menyelesaikan masalah dunia nyata berbasis citra dan data.
-                </p>
+                <div class="why-card-content">
+                    <h3>4. Integritas & Dedikasi</h3>
+                    <p>Pribadi yang jujur, teliti, disiplin, komunikatif, dan mahir dalam manajemen waktu proyek mandiri.</p>
+                </div>
             </div>
 
         </div>
 
-    </section>
+        <!-- 3 Categorized Technical Hard Skills -->
+        <div class="skills-grid-3col">
 
-    <!-- ================= SKILLS ================= -->
-
-    <section id="skills">
-
-        <div class="section-title">
-
-            <span>EXPERTISE & TOOLS</span>
-
-            <h2>
-                Core Competencies
-            </h2>
-
-        </div>
-
-        <div class="skills-categories">
-
-            <!-- Kategori 1: IT & Data Analysis -->
+            <!-- Kategori 1: IT, Data Analysis & AI -->
             <div class="skill-category-card">
                 <div class="category-header">
-                    <span class="category-icon">💻</span>
-                    <h3>IT & Data Analysis</h3>
+                    <div class="category-icon">💻</div>
+                    <h3>IT, Data Analysis & AI</h3>
                 </div>
                 <ul class="skill-list">
                     <li><i class="fas fa-check-circle"></i> Data Analysis & Troubleshooting Sistem</li>
                     <li><i class="fas fa-check-circle"></i> Natural Language Processing (NLP)</li>
-                    <li><i class="fas fa-check-circle"></i> Deep Learning (MLP) & ML (Classification)</li>
+                    <li><i class="fas fa-check-circle"></i> Computer Vision (CNN & DenseNet-GRU)</li>
+                    <li><i class="fas fa-check-circle"></i> Machine Learning & Deep Learning (MLP)</li>
                     <li><i class="fas fa-check-circle"></i> Imbalanced Data (SMOTE & Class Weights)</li>
                     <li><i class="fas fa-check-circle"></i> Manajemen Database (SQL) & Web Dev</li>
+                    <li><i class="fas fa-check-circle"></i> Programming Tools: Python, Jupyter Notebook</li>
                 </ul>
             </div>
 
             <!-- Kategori 2: Productivity & Admin -->
             <div class="skill-category-card">
                 <div class="category-header">
-                    <span class="category-icon">📈</span>
+                    <div class="category-icon">📈</div>
                     <h3>Productivity & Admin</h3>
                 </div>
                 <ul class="skill-list">
@@ -486,20 +891,20 @@
                     <li><i class="fas fa-check-circle"></i> Pengolahan Data Kompleks & Rekapitulasi</li>
                     <li><i class="fas fa-check-circle"></i> Administrasi Keuangan & Inventory</li>
                     <li><i class="fas fa-check-circle"></i> Sistem Reservasi & Front-Desk Operation</li>
-                    <li><i class="fas fa-check-circle"></i> Manajemen Waktu & Proyek Mandiri</li>
+                    <li><i class="fas fa-check-circle"></i> Laporan Bisnis & Logistik Distribusi</li>
                 </ul>
             </div>
 
             <!-- Kategori 3: Digital Branding -->
             <div class="skill-category-card">
                 <div class="category-header">
-                    <span class="category-icon">🚀</span>
-                    <h3>Digital Branding</h3>
+                    <div class="category-icon">🚀</div>
+                    <h3>Digital Branding & Professional</h3>
                 </div>
                 <ul class="skill-list">
+                    <li><i class="fas fa-check-circle"></i> ATS-Optimization untuk Resume</li>
                     <li><i class="fas fa-check-circle"></i> Personal Branding Strategy</li>
                     <li><i class="fas fa-check-circle"></i> Digital Copywriting & Narasi Profesional</li>
-                    <li><i class="fas fa-check-circle"></i> ATS-Optimization untuk Resume</li>
                     <li><i class="fas fa-check-circle"></i> LinkedIn Profile Optimization</li>
                     <li><i class="fas fa-check-circle"></i> Komunikasi & Konsultasi Klien Strategis</li>
                 </ul>
@@ -509,169 +914,86 @@
 
     </section>
 
-    <!-- ================= GITHUB ================= -->
-
-    <section id="github">
-
-        <div class="section-title">
-
-            <span>GITHUB & PROJECTS</span>
-
-            <h2>
-                My Repositories & Tech Projects
-            </h2>
-
-        </div>
-
-        <div class="project-grid" id="github-projects">
-
-            <div class="project-card">
-                <div class="project-icon">🩻</div>
-                <h3>Thoracic X-Ray Multilabel</h3>
-                <p>
-                    Sistem klasifikasi multi-label untuk 15 kelas penyakit toraks menggunakan citra radiografi X-Ray
-                    dada dari dataset <b>NIH ChestX-ray14</b> (DenseNet-GRU).
-                </p>
-                <div class="project-tags" style="margin-top:15px;">
-                    <span>Deep Learning</span>
-                    <span>Python</span>
-                    <span>Computer Vision</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-icon">📊</div>
-                <h3>Sentiment Analysis Models</h3>
-                <p>
-                    Analisis perbandingan kinerja model klasifikasi (Naive Bayes, Logistic Regression, dan SVM) untuk
-                    analisis sentimen data Twitter tagar #IndonesiaGelap.
-                </p>
-                <div class="project-tags" style="margin-top:15px;">
-                    <span>Machine Learning</span>
-                    <span>NLP</span>
-                    <span>Jupyter Notebook</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-icon">👤</div>
-                <h3>Fake Face Detection (CNN)</h3>
-                <p>
-                    Pemanfaatan teknologi AI berbasis Convolutional Neural Network (CNN) untuk deteksi otomatis keaslian
-                    citra wajah secara akurat.
-                </p>
-                <div class="project-tags" style="margin-top:15px;">
-                    <span>AI</span>
-                    <span>CNN</span>
-                    <span>Image Processing</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-icon">💳</div>
-                <h3>Credit Card Fraud (MLP)</h3>
-                <p>
-                    Klasifikasi penipuan transaksi kartu kredit menggunakan arsitektur Multi-Layer Perceptron (MLP)
-                    untuk dataset finansial yang sangat tidak seimbang.
-                </p>
-                <div class="project-tags" style="margin-top:15px;">
-                    <span>Deep Learning</span>
-                    <span>MLP</span>
-                    <span>Data Science</span>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ================= CONTACT ================= -->
+    <!-- ================= 7. CONTACT SECTION (PRESERVED AS REQUESTED) ================= -->
 
     <section id="contact">
 
-        <div class="section-title">
+        <div class="split-grid">
 
-            <span>LET'S CONNECT</span>
+            <!-- CONTACT LEFT: Pitch & Quick Actions -->
+            <div class="split-left">
 
-            <h2>
-                Let's Collaborate
-            </h2>
+                <div class="section-heading-left">
+                    <span class="section-badge"><i class="fas fa-paper-plane"></i> LET'S CONNECT</span>
+                    <h2>Mari Berkolaborasi</h2>
+                </div>
 
-        </div>
-
-        <div class="contact-box">
-
-            <h3>
-                Mencari talenta IT yang andal dalam Data Analysis, Administrasi, atau Digital Branding?
-            </h3>
-
-            <p class="contact-closing">
-                Saya selalu terbuka untuk berdiskusi mengenai peluang karir di bidang IT, analisis data, administrasi
-                operasional, maupun konsultasi personal branding strategis.
-            </p>
-
-            <div class="contact-info">
-
-                <div class="contact-item">
-
-                    <h4>📧 Email</h4>
-
-                    <span>
-                        <a href="mailto:ayunalarati777@gmail.com">
-                            ayunalarati777@gmail.com
+                <div class="contact-card-left">
+                    <h3>Mencari talenta yang andal dalam Data Analysis, Administrasi, atau Digital Branding?</h3>
+                    <p>
+                        Saya selalu terbuka untuk berdiskusi mengenai peluang karir di bidang IT, analisis data, administrasi operasional, maupun konsultasi personal branding strategis.
+                    </p>
+                    <div class="contact-cta-buttons">
+                        <a href="mailto:ayunalarati777@gmail.com" class="btn">
+                            <i class="fas fa-envelope"></i> Kirim Email
                         </a>
-                    </span>
-
-                </div>
-
-                <div class="contact-item">
-
-                    <h4>📱 Phone / WA</h4>
-
-                    <span>
-                        <a href="https://wa.me/6287717998245" target="_blank"
-                            style="color: inherit; text-decoration: none;">
-                            0877-1799-8245
+                        <a href="https://wa.me/6287717998245" target="_blank" class="btn-outline">
+                            <i class="fab fa-whatsapp"></i> Chat WhatsApp
                         </a>
-                    </span>
-
-                </div>
-
-                <div class="contact-item">
-
-                    <h4>📍 Based In</h4>
-
-                    <span>
-                        Tangerang, Indonesia
-                    </span>
-
-                </div>
-
-                <div class="contact-item">
-
-                    <h4>💼 Available For</h4>
-
-                    <span>
-                        IT Specialist, Data Analyst, Admin, & Branding Consultant Roles
-                    </span>
-
+                    </div>
                 </div>
 
             </div>
 
-            <div class="social-links">
+            <!-- CONTACT RIGHT: Contact Grid & Socials -->
+            <div class="split-right">
 
-                <a href="https://www.linkedin.com/in/ayu-nalarati/" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
+                <div class="section-heading-left">
+                    <span class="section-badge"><i class="fas fa-address-card"></i> REACH ME DIRECTLY</span>
+                    <h2>Informasi Kontak</h2>
+                </div>
 
-                <a href="https://github.com/ayunalarati" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
+                <div class="contact-info-grid">
 
-                <a href="https://www.instagram.com/aynlrt/" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
+                    <div class="contact-item">
+                        <h4><i class="fas fa-envelope"></i> Email</h4>
+                        <a href="mailto:ayunalarati777@gmail.com">ayunalarati777@gmail.com</a>
+                    </div>
+
+                    <div class="contact-item">
+                        <h4><i class="fab fa-whatsapp"></i> Phone / WA</h4>
+                        <a href="https://wa.me/6287717998245" target="_blank">0877-1799-8245</a>
+                    </div>
+
+                    <div class="contact-item">
+                        <h4><i class="fas fa-map-marker-alt"></i> Lokasi</h4>
+                        <span>Kelapa Dua, Tangerang, Banten</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <h4><i class="fas fa-briefcase"></i> Status</h4>
+                        <span>Open for Roles & Projects</span>
+                    </div>
+
+                </div>
+
+                <div class="social-links-box">
+                    <span>Sosial Media:</span>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/ayu-nalarati/" target="_blank" title="LinkedIn Profile">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/ayunalarati" target="_blank" title="GitHub Profile">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/aynlrt/" target="_blank" title="Instagram Profile">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:ayunalarati777@gmail.com" title="Send Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
 
             </div>
 
@@ -683,19 +1005,24 @@
 
     <footer>
 
-        <h3>
-            Ayu Nalarati
-        </h3>
-
-        <p>
-            Data Analyst & AI Enthusiast • IT Administrator
-        </p>
-
-        <small>
-            Combining Tech Knowledge, Data-Driven Approach, and Operational Excellence ✨
-        </small>
+        <h3>Ayu Nalarati</h3>
+        <p>Data Analyst, AI Enthusiast & IT Administrator</p>
+        <small>Combining Tech Knowledge, Data-Driven Approach, and Operational Excellence ✨</small>
 
     </footer>
+
+    <!-- Floating Back-to-Top Button -->
+    <button id="back-to-top" aria-label="Back to top" title="Kembali ke atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Certificate & Documentation Lightbox Modal -->
+    <div class="cert-modal" id="cert-modal">
+        <div class="cert-modal-content">
+            <button class="cert-modal-close" id="close-cert-modal" aria-label="Tutup preview">&times;</button>
+            <img src="assets/certificate_sentik.jpg" alt="Preview Dokumen - Ayu Nalarati" class="cert-modal-img">
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 
