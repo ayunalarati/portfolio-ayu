@@ -1,278 +1,213 @@
 // ========================================
-// DARK MODE
+// THEME TOGGLE (DARK / LIGHT MODE)
 // ========================================
 
 const themeToggle = document.getElementById("theme-toggle");
-
 const savedTheme = localStorage.getItem("theme");
 
-if(savedTheme === "dark"){
-
+if (savedTheme === "dark") {
     document.body.classList.add("dark");
     themeToggle.innerHTML = "☀️";
-
-}else{
-
+} else {
     themeToggle.innerHTML = "🌙";
-
 }
 
-themeToggle.addEventListener("click",()=>{
-
+themeToggle.addEventListener("click", () => {
     document.body.classList.toggle("dark");
 
-    if(document.body.classList.contains("dark")){
-
-        localStorage.setItem("theme","dark");
+    if (document.body.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
         themeToggle.innerHTML = "☀️";
-
-    }else{
-
-        localStorage.setItem("theme","light");
+    } else {
+        localStorage.setItem("theme", "light");
         themeToggle.innerHTML = "🌙";
+    }
+});
 
+// ========================================
+// DYNAMIC TYPEWRITER / ROLE ROTATOR
+// ========================================
+
+const roles = [
+    "Data Analyst & AI Enthusiast",
+    "IT Administrator",
+    "Computer Vision & NLP Developer",
+    "Digital & Resume Strategist"
+];
+
+const roleElement = document.getElementById("typewriter-role");
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typeSpeed = 100;
+
+function typeWriterEffect() {
+    if (!roleElement) return;
+
+    const currentRole = roles[roleIndex];
+
+    if (isDeleting) {
+        roleElement.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+        typeSpeed = 45;
+    } else {
+        roleElement.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+        typeSpeed = 95;
     }
 
-});
+    if (!isDeleting && charIndex === currentRole.length) {
+        typeSpeed = 2200; // Pause at end of text
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        typeSpeed = 400; // Pause before typing next
+    }
 
-
-// ========================================
-// GITHUB PROJECTS
-// ========================================
-
-const githubContainer =
-document.getElementById("github-projects");
-
-githubContainer.innerHTML = `
-<div class="project-card">
-    <div class="project-icon">⏳</div>
-    <h3>Loading Repositories...</h3>
-    <p>Please wait a moment while we fetch the latest projects from GitHub.</p>
-</div>
-`;
-
-fetch("https://api.github.com/users/ayunalarati/repos")
-
-.then(response => response.json())
-
-.then(repos => {
-
-    githubContainer.innerHTML = "";
-
-    repos
-
-    .sort((a,b)=>{
-
-        return b.updated_at.localeCompare(a.updated_at);
-
-    })
-
-    .slice(0,6)
-
-    .forEach(repo=>{
-
-        const card = document.createElement("div");
-
-        card.classList.add("project-card");
-        
-        // Membersihkan nama repo agar lebih rapi (menghapus tanda hubung)
-        const cleanName = repo.name.replace(/-/g, " ").substring(0, 40) + (repo.name.length > 40 ? "..." : "");
-
-        card.innerHTML = `
-
-        <div class="project-icon">🚀</div>
-
-        <h3>${cleanName}</h3>
-
-        <p style="font-size: 0.9em; margin-bottom: 10px;">
-        ${repo.description || "Eksplorasi proyek dan kode sumber terkait di repositori ini."}
-        </p>
-
-        <div class="project-tags" style="margin-top:15px; margin-bottom:15px;">
-            <span>${repo.language || "Data Science"}</span>
-        </div>
-
-        <a href="${repo.html_url}" target="_blank" style="color: inherit; font-weight: 600; text-decoration: underline;">
-           View Repository →
-        </a>
-
-        `;
-
-        githubContainer.appendChild(card);
-
-    });
-
-})
-
-.catch(error=>{
-
-    githubContainer.innerHTML = `
-
-    <div class="project-card">
-        <div class="project-icon">😢</div>
-        <h3>Oops</h3>
-
-        <p>
-        Gagal memuat repositori dari GitHub. Silakan kunjungi profil langsung.
-        </p>
-    </div>
-
-    `;
-
-    console.log(error);
-
-});
-
-
-// ========================================
-// SCROLL REVEAL
-// ========================================
-
-const hiddenElements =
-document.querySelectorAll("section");
-
-const observer = new IntersectionObserver(
-
-(entries)=>{
-
-    entries.forEach(entry=>{
-
-        if(entry.isIntersecting){
-
-            entry.target.classList.add("show");
-
-        }
-
-    });
-
-},
-
-{
-    threshold:0.15
+    setTimeout(typeWriterEffect, typeSpeed);
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(typeWriterEffect, 600);
+});
+
+// ========================================
+// ACTIVE NAVBAR & SMOOTH SCROLL
+// ========================================
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-links a");
+const backToTopBtn = document.getElementById("back-to-top");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 140;
+        const sectionHeight = section.clientHeight;
+
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+        }
+    });
+
+    // Back to top visibility
+    if (backToTopBtn) {
+        if (scrollY > 350) {
+            backToTopBtn.classList.add("show");
+        } else {
+            backToTopBtn.classList.remove("show");
+        }
+    }
+});
+
+if (backToTopBtn) {
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
+
+// ========================================
+// IMAGE MODAL LIGHTBOX (CERTIFICATE & DOCS)
+// ========================================
+
+const certModal = document.getElementById("cert-modal");
+const certModalImg = certModal ? certModal.querySelector(".cert-modal-img") : null;
+const closeCertBtn = document.getElementById("close-cert-modal");
+const openCertBtn = document.getElementById("btn-preview-cert");
+
+function openLightbox(imgSrc, imgAlt) {
+    if (certModal && certModalImg) {
+        certModalImg.src = imgSrc || "assets/certificate_sentik.jpg";
+        certModalImg.alt = imgAlt || "Dokumentasi & Sertifikat SeNTIK 2026";
+        certModal.classList.add("active");
+        document.body.style.overflow = "hidden"; // prevent background scroll
+    }
+}
+
+function closeLightbox() {
+    if (certModal) {
+        certModal.classList.remove("active");
+        document.body.style.overflow = "auto";
+    }
+}
+
+// Bind all clickable triggers
+document.querySelectorAll(".previewable-trigger").forEach(trigger => {
+    trigger.addEventListener("click", () => {
+        const src = trigger.getAttribute("data-img-src");
+        const alt = trigger.getAttribute("data-img-alt");
+        openLightbox(src, alt);
+    });
+});
+
+if (openCertBtn) {
+    openCertBtn.addEventListener("click", () => {
+        openLightbox("assets/certificate_sentik.jpg", "Sertifikat Penyaji SeNTIK 2026");
+    });
+}
+
+if (closeCertBtn) closeCertBtn.addEventListener("click", closeLightbox);
+
+if (certModal) {
+    certModal.addEventListener("click", (e) => {
+        if (e.target === certModal) {
+            closeLightbox();
+        }
+    });
+}
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && certModal && certModal.classList.contains("active")) {
+        closeLightbox();
+    }
+});
+
+// ========================================
+// INTERSECTION OBSERVER FOR REVEAL ANIMATIONS
+// ========================================
+
+const revealElements = document.querySelectorAll(
+    ".snapshot-card, .about-card, .education-card, .strengths-pill-box, .featured-project-box, .project-card-balanced, .cert-card-left, .doc-card-right, .experience-summary-card, .timeline-item, .why-card, .skill-category-card, .contact-card-left, .contact-item, .social-links-box"
 );
 
-hiddenElements.forEach(section=>{
-
-    section.classList.add("hidden");
-
-    observer.observe(section);
-
-});
-
-
-// ========================================
-// ACTIVE NAVBAR
-// ========================================
-
-const sections =
-document.querySelectorAll("section");
-
-const navLinks =
-document.querySelectorAll(".nav-links a");
-
-window.addEventListener("scroll",()=>{
-
-    let current = "";
-
-    sections.forEach(section=>{
-
-        const sectionTop =
-        section.offsetTop - 150;
-
-        const sectionHeight =
-        section.clientHeight;
-
-        if(pageYOffset >= sectionTop){
-
-            current =
-            section.getAttribute("id");
-
+const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+            observer.unobserve(entry.target);
         }
-
     });
-
-    navLinks.forEach(link=>{
-
-        link.classList.remove("active");
-
-        if(
-
-            link.getAttribute("href")
-            ===
-            `#${current}`
-
-        ){
-
-            link.classList.add("active");
-
-        }
-
-    });
-
+}, {
+    threshold: 0.08,
+    rootMargin: "0px 0px -30px 0px"
 });
 
-
-// ========================================
-// SMOOTH SCROLL
-// ========================================
-
-document
-.querySelectorAll('a[href^="#"]')
-
-.forEach(anchor=>{
-
-    anchor.addEventListener("click",
-
-    function(e){
-
-        e.preventDefault();
-
-        const target =
-        document.querySelector(
-            this.getAttribute("href")
-        );
-
-        target.scrollIntoView({
-
-            behavior:"smooth"
-
-        });
-
-    });
-
+revealElements.forEach(el => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(22px)";
+    el.style.transition = "opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)";
+    revealObserver.observe(el);
 });
 
-
 // ========================================
-// HERO TYPING EFFECT
-// ========================================
-
-const heroTitle =
-document.querySelector(".hero h2");
-
-const originalText =
-heroTitle.innerHTML;
-
-window.addEventListener("load",()=>{
-
-    heroTitle.style.opacity = "0";
-
-    setTimeout(()=>{
-
-        heroTitle.style.opacity = "1";
-
-    },300);
-
-});
-
-
-// ========================================
-// CONSOLE SIGNATURE 😎
+// CONSOLE BRANDING
 // ========================================
 
 console.log(
-"%cDesigned & Built by Ayu Nalarati 🚀",
-"color:#A4DD00;font-size:18px;font-weight:bold;"
+    "%cAyu Nalarati • Portfolio Website 🚀",
+    "color:#84CC16;font-size:18px;font-weight:bold;padding:6px 0;"
 );
